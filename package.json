@@ -1,0 +1,28 @@
+{
+  "name": "djs13-discord-bot-template",
+  "version": "1.0.0",
+  "description": "Template for your discord bot. Discord.js v13, MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seira-code/djs13-discord-bot-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seira-code/djs13-discord-bot-template/issues"
+  },
+  "homepage": "https://github.com/seira-code/djs13-discord-bot-template#readme",
+  "dependencies": {
+    "@discordjs/builders": "^0.8.2",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "discord-api-types": "^0.24.0",
+    "discord.js": "^13.3.1",
+    "dotenv": "^10.0.0",
+    "mongoose": "^6.0.13"
+  }
+}
