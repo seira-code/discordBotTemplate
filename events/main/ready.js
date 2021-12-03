@@ -1,13 +1,6 @@
 module.exports = {
     name: 'ready',
     async execute(client) {
-        fs.readdir('./handlers', (err, files) => {
-            if (err) return console.error(err)
-            files.filter(v => v.endsWith(".js") && !v.startsWith('events')).forEach(f => {
-                require(`../../handlers/${f}`).init(client)
-            })
-        })
-
 
         setInterval(() => {
             let players = 0
