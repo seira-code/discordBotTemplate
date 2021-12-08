@@ -9,8 +9,8 @@ client.commands = new Collection()
 client.commandsArray = []
 
 global.Config = require('./jsons/config.json')
-global.Guild = require('./models/Guild')
-global.User = require('./models/User')
+global.GuildModel = require('./models/Guild')
+global.UserModel = require('./models/User')
 
 require('./utils/db').init()
 require('./handlers/events.js').init(client)
