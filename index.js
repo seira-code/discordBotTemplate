@@ -5,8 +5,8 @@ const client = new Client({
 })
 
 client.login().then(()=>{ // Login with DISCORD_TOKEN on .env
-	client.commandsArray = []
 client.commands = new Collection()
+client.commandsArray = []
 
 global.Config = require('./jsons/config.json')
 global.Guild = require('./models/Guild')
