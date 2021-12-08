@@ -13,7 +13,7 @@ module.exports = {
         if(!interaction.guild) return;
 
         await checkDB(interaction.user.id, interaction.guild.id)
-        !(await Guild.findOne({ guildId: interaction.guild.id })) ? client.emit('guildCreate', interaction.guild) : null
+        !(await GuildModel.findOne({ guildId: interaction.guild.id })) ? client.emit('guildCreate', interaction.guild) : null
 
         const cmd = client.commands.get(interaction.commandName)
         if (!cmd) return;
