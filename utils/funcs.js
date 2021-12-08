@@ -1,3 +1,3 @@
 module.exports.checkDB = async (id, guild) => {
-    !(await User.findOne({ userId: id, guildId: guild })) ? User.create({ userId: id, guildId: guild }) : null
+    !(await UserModel.findOne({ userId: id, guildId: guild })) ? UserModel.create({ userId: id, guildId: guild }) : null
 }
