@@ -9,9 +9,9 @@ module.exports.init = async (client) => {
         fs.readdirSync(`./commands/${dir}`).forEach(file => {
             const cmd = require(`../commands/${dir}/${file}`)
             client.commandsArray.push(cmd.slash.toJSON())
-            client.commands.set(cmd.name, cmd)
+            client.commands.set(cmd.slash.toJSON().name, cmd)
         })
     })
 
-     client.application.commands.set(client.commandsArray)
+    client.application.commands.set(client.commandsArray)
 }

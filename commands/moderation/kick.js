@@ -5,14 +5,13 @@ module.exports = {
     slash: new SlashCommandBuilder()
         .setName('kick')
         .setDescription("Кик пользователя")
-        .addUserOption(option=>
-        option.setName('пользователь')
-            .setDescription('Пользователь для кика')
-            .setRequired(true))
-        .addStringOption(option=>
-        option.setName('причина')
-            .setDescription('Причина кика')),
-    name: 'kick',
+        .addUserOption(option =>
+            option.setName('пользователь')
+                .setDescription('Пользователь для кика')
+                .setRequired(true))
+        .addStringOption(option =>
+            option.setName('причина')
+                .setDescription('Причина кика')),
     /**
      * @param {Client} client
      * @param {CommandInteraction} interaction
@@ -21,7 +20,7 @@ module.exports = {
         const member = interaction.options.getMember('пользователь')
         const reason = interaction.options.getString('причина') ?? "Без причины"
         if (!member.kickable) return interaction.default("Я не могу кикнуть данного пользователя", true)
-        member.kick(`${interaction.user.username}: ${reason}`).then(async() => {
+        member.kick(`${interaction.user.username}: ${reason}`).then(async () => {
             await interaction.reply({
                 embeds: [
                     new MessageEmbed()
