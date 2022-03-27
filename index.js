@@ -17,4 +17,9 @@ require('./handlers/events.js').init(client)
 require('./handlers/cmd.js').init(client)
 }) 
 
+client.on('error',error=>console.log(error))
+client.on('warn',warn=>console.log(warn))
+process.on('uncaughtException', console.error);
+process.on('unhandledRejection', console.error);
+
 module.exports = client;
